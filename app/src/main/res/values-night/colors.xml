@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EA</color>
+    <color name="colorPrimaryDark">#5502C8</color>
+    <color name="toolbar">#03A9F4</color>
+    <color name="toolbar_content">#FFFFFF</color>
+    <color name="iconTintLightMode">#808080</color> <!-- Grey color (unchanged) -->
+    <color name="iconTintDarkMode">#FFFFFF</color> <!-- White color (unchanged) -->
+    <color name="home_tv_tittle_text">#FFFFFF</color>
+</resources>

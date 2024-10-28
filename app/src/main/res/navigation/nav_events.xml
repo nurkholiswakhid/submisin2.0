@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_events"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.dicodingeventstracker.domain.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailEventsActivity"
+            app:destination="@id/detailEventsActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingEventsFragment"
+        android:name="com.dicodingeventstracker.domain.upcoming.UpcomingEventsFragment"
+        android:label="Upcoming"
+        tools:layout="@layout/fragment_upcoming_events" >
+        <action
+            android:id="@+id/action_upcomingEventsFragment_to_detailEventsActivity"
+            app:destination="@id/detailEventsActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pastEventsFragment"
+        android:name="com.dicodingeventstracker.domain.past.PastEventsFragment"
+        android:label="Past"
+        tools:layout="@layout/fragment_past_events" >
+        <action
+            android:id="@+id/action_pastEventsFragment_to_detailEventsActivity"
+            app:destination="@id/detailEventsActivity" />
+        <action
+            android:id="@+id/action_pastEventsFragment_to_searchEventsFragment"
+            app:destination="@id/searchEventsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchEventsFragment"
+        android:name="com.dicodingeventstracker.domain.search.SearchEventFragment"
+        tools:layout="@layout/fragment_search_event" >
+        <action
+            android:id="@+id/action_searchEventsFragment_to_detailEventsActivity"
+            app:destination="@id/detailEventsActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/detailEventsActivity"
+        android:name="com.dicodingeventstracker.domain.detail.DetailEventsActivity"
+        android:label="activity_detail_events"
+        tools:layout="@layout/activity_detail_events" >
+        <argument
+            android:name="eventDetails"
+            app:argType="com.dicodingeventstracker.domain.entity.Events" />
+    </activity>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.dicodingeventstracker.domain.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/favoriteEventsFragment"
+        android:name="com.dicodingeventstracker.domain.favorite.FavoriteEventsFragment"
+        android:label="fragment_favorite_events"
+        tools:layout="@layout/fragment_favorite_events" >
+        <action
+            android:id="@+id/action_favoriteEventsFragment_to_detailEventsActivity"
+            app:destination="@id/detailEventsActivity" />
+    </fragment>
+
+
+</navigation>
